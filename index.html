@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tube of Toggler</title>
+    <style>
+    body{
+        background-color: #85FFBD;
+      background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+      min-height:100vh;
+
+    }
+    .app-title{
+        text-align: center;
+    }
+       .Tube-container{
+        background-color:#fff;
+        width:400px;
+        margin: 10px auto;
+        display:flex;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+
+
+      }
+      .Tube-img{
+        height: 250px;
+
+      }
+
+      .btn-container{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .btn-toggle{
+        font-size: 20px;
+        padding: 5px 20px;
+        border-radius: 40px;
+        border: none;
+        margin: 0 20px;
+        cursor: pointer;
+        color:#fff;
+
+
+      }
+
+      .btn-on{
+        background-color:#4CAF50;
+      }
+
+      .btn-off{
+        background-color:#F44336;
+      }
+
+      .btn-toggle:hover{
+       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+      }
+      @media screen and (max-width: 600px){
+        .Tube-container{
+            width: 80px;
+
+        }
+        .bulb-img {
+            height: 150px;
+        }
+
+    }
+    
+    </style>
+</head>
+<body>
+    <h1 class="app-title"> Tube Toggler</h1>
+    <div class="Tube-container">
+    <img src="off.png" class="Tube-img" id="Tube"/>
+
+</div>
+<div class="btn-container">
+    <button class="btn-toggle btn-on" onclick="turnOn()">On</button>
+    <button class="btn-toggle btn-off" onclick="turnOff()">Off</button>
+</div>
+<script>
+    function turnOn(){
+        const TubeElement = document.getElementById('Tube');
+        TubeElement.src = "on.png";
+    }
+    function turnOff(){
+        const TubeElement = document.getElementById('Tube');
+        TubeElement.src = "off.png";
+    }
+</script>
+</body>
+</html>
